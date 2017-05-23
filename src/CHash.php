@@ -75,7 +75,7 @@ class CHash
 			throw new Exception("Physical Node '$node' already exists.");
 		}
 
-		for($i = 0; $i < round($this->replicas * $widget); $i++) {
+		for ($i = 0; $i < round($this->replicas * $widget); $i++) {
 			$position = $this->hasher->hash(sprintf("%s#%d", $node, $i));
 			$this->nodeList[$position] = $node;
 			$this->physicalNodeList[$node][] = $position;
@@ -227,12 +227,11 @@ class CHash
 	 * @return $this
 	 */
 	private function sortNodeList()
-    {
-        if (!$this->isSort) {
-            ksort($this->nodeList, SORT_REGULAR);
-            $this->isSorted = true;
-        }
-
-	    return $this;
-    }
+	{
+		if (!$this->isSort) {
+			ksort($this->nodeList, SORT_REGULAR);
+			$this->isSorted = true;
+		}
+		return $this;
+	}
 }
