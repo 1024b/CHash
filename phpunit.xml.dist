@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.2/phpunit.xsd"
+         backupGlobals="false"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         bootstrap="tests/autoload.php"
+         stopOnFailure="false">
+
+    <testsuites>
+        <testsuite name="PHP unit test">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
